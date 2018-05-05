@@ -1,2 +1,2 @@
 
-print('{0:_^}'.format('hello'))
+print('a', 'b', 'c', 'd')
