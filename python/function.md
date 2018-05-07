@@ -1,5 +1,6 @@
 
-# 定义函数
+# 普通函数
+
 不带参数
 ```py
 def say_hello():
@@ -99,4 +100,49 @@ def print_max(x, y):
 
 print_max(3, 5)
 print(print_max.__doc__)
+```
+
+# 解释器
+
+解释器是特殊的函数，它的参数和返回值都是函数
+
+```py
+def p_decorate(func):
+   def func_wrapper(*args, **kwargs):
+       return "<p>{0}</p>".format(func(*args, **kwargs))
+   return func_wrapper
+
+class Person(object):
+    def __init__(self):
+        self.name = "John"
+        self.family = "Doe"
+
+    @p_decorate
+    def get_fullname(self):
+        return self.name+" "+self.family
+
+my_person = Person()
+
+print (my_person.get_fullname()) # <p>John Doe</p>
+```
+
+可以向解释器传递参数，@之后应该加一个解释器，tags函数返回值正好是一个解释器
+
+```py
+from functools import wraps
+
+def tags(tag_name):
+    def tags_decorator(func):
+        @wraps(func) # keep func original attribute
+        def func_wrapper(name):
+            return "<{0}>{1}</{0}>".format(tag_name, func(name))
+        return func_wrapper
+    return tags_decorator
+
+@tags("p")
+def get_text(name):
+    return "Hello "+name
+
+print(get_text("John")) # <p>Hello John</p>
+print(get_text.__name__) # get_text
 ```

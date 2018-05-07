@@ -30,3 +30,11 @@ else:
 3
 The for loop is over
 ```
+
+# 列表推导
+
+```py
+listone = [2, 3, 4]
+listtwo = [2*i for i in listone if i > 2]
+print(listtwo) # [6, 8]
+```
