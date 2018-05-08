@@ -24,26 +24,6 @@ print(os.getcwd())
 print(__name__)
 ```
 
-# 模块的名称列表
-
-不传参数则获取当前模块名称列表，dir可以作用于任何对象
-```py
-import sys
-
-print(dir(sys))
-print(dir())
-
-```
-
-删除当前模块的一个名称
-
-```py
-a = 1
-print(dir())
-
-del a
-print(dir())
-```
 
 # 目录分隔符
 

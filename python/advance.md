@@ -98,12 +98,32 @@ product = reduce( (lambda x, y: x * y), [1, 2, 3, 4] )
 # Output: 24
 ```
 
-# 列表推导
+# 推导
+
+## 列表推导
+
+规范
+```py
+variable = [out_exp for out_exp in input_list if out_exp == 2]
+```
+例子
+```py
+multiples = [i for i in range(30) if i % 3 is 0]
+print(multiples)
+# Output: [0, 3, 6, 9, 12, 15, 18, 21, 24, 27]
+```
+
+## 字典推导
 
 ```py
-listone = [2, 3, 4]
-listtwo = [2*i for i in listone if i > 2]
-print(listtwo) # [6, 8]
+new_dict = {v: k for k, v in some_dict.items()}
+```
+## 集合推导
+
+```py
+squared = {x**2 for x in [1, 1, 2]}
+print(squared)
+# Output: {1, 4}
 ```
 
 # 三元运算符
@@ -111,4 +131,62 @@ print(listtwo) # [6, 8]
 ```py
 is_fat = True
 state = "fat" if is_fat else "not fat"
+```
+
+# 自省
+
+## dir
+
+不传参数则获取当前模块名称列表，dir可以作用于任何对象
+```py
+import sys
+
+print(dir(sys))
+print(dir())
+
+```
+
+删除当前模块的一个名称
+
+```py
+a = 1
+print(dir())
+
+del a
+print(dir())
+```
+
+## type
+
+```py
+print(type(''))
+# Output: <type 'str'>
+
+print(type([]))
+# Output: <type 'list'>
+
+print(type({}))
+# Output: <type 'dict'>
+
+print(type(dict))
+# Output: <type 'type'>
+
+print(type(3))
+# Output: <type 'int'>
+```
+
+## id
+
+```py 
+name = "Yasoob"
+print(id(name))
+# Output: 139972439030304
+```
+
+## inspect模块
+
+```py
+import inspect
+print(inspect.getmembers(str))
+# Output: [('__add__', <slot wrapper '__add__' of ... ...
 ```
