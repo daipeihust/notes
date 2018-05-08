@@ -1,17 +1,10 @@
+#!/usr/local/bin/python3
 
-from functools import wraps
+def test_method(v1, v2, v3):
+    print(v1, v2, v3)
 
-def tags(tag_name):
-    def tags_decorator(func):
-        @wraps(func)
-        def func_wrapper(name):
-            return "<{0}>{1}</{0}>".format(tag_name, func(name))
-        return func_wrapper
-    return tags_decorator
+vs = ('a', 'c', 'd')
+test_method(*vs)
 
-@tags("p")
-def get_text(name):
-    return "Hello "+name
-
-print(get_text("John"))
-print(get_text.__name__)
+vs2 = {"v1": 1, "v2": 2, "v3": 3}
+test_method(**vs2)

@@ -38,3 +38,20 @@ listone = [2, 3, 4]
 listtwo = [2*i for i in listone if i > 2]
 print(listtwo) # [6, 8]
 ```
+
+# 遍历*args和**kwargs
+
+```py
+def test_var_args(f_arg, *argv):
+    print("first normal arg:", f_arg)
+    for arg in argv:
+        print("another arg through *argv:", arg)
+
+test_var_args('yasoob', 'python', 'eggs', 'test')
+```
+
+```py
+def greet_me(**kwargs):
+    for key, value in kwargs.items():
+        print("{0} == {1}".format(key, value))
+```
