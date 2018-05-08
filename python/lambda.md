@@ -5,6 +5,13 @@
 lambda 参数:操作(参数)
 ```
 
+例子
+```py
+add = lambda x, y: x + y
+
+print(add(3, 5))
+# Output: 8
+```
 
 
 ```py
