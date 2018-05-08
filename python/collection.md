@@ -63,3 +63,43 @@ print(shoplist[::2])
 shoplist = ['apple', 'mango', 'carrot', 'banana']
 mylist = shoplist[:]
 ```
+
+# defaultdict
+
+```py
+from collections import defaultdict
+
+colours = (
+    ('Yasoob', 'Yellow'),
+    ('Ali', 'Blue'),
+    ('Arham', 'Green'),
+    ('Ali', 'Black'),
+    ('Yasoob', 'Red'),
+    ('Ahmed', 'Silver'),
+)
+
+favourite_colours = defaultdict(list)
+
+for name, colour in colours:
+    favourite_colours[name].append(colour)
+
+print(favourite_colours)
+# output:
+# defaultdict(<type 'list'>,
+#    {'Arham': ['Green'],
+#     'Yasoob': ['Yellow', 'Red'],
+#     'Ahmed': ['Silver'],
+#     'Ali': ['Blue', 'Black']
+# })
+```
+
+在一个字典中对一个键进行嵌套赋值
+
+```py
+import collections
+tree = lambda: collections.defaultdict(tree)
+some_dict = tree()
+some_dict['colours']['favourite'] = "yellow"
+
+## 运行正常
+```

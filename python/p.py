@@ -1,10 +1,15 @@
 #!/usr/local/bin/python3
 
-class MyClass(object):
-  __slots__ = ['name', 'identifier']
-  def __init__(self, name, identifier):
-      self.name = name
-      self.identifier = identifier
+from collections import Counter
 
-myClass = MyClass('a', 'b')
-print(myClass.name)
+colours = (
+    ('Yasoob', 'Yellow'),
+    ('Ali', 'Blue'),
+    ('Arham', 'Green'),
+    ('Ali', 'Black'),
+    ('Yasoob', 'Red'),
+    ('Ahmed', 'Silver'),
+)
+
+favs = Counter(name for name, colour in colours)
+print(favs)
