@@ -1,15 +1,9 @@
 #!/usr/local/bin/python3
 
-from collections import Counter
+from collections import deque
 
-colours = (
-    ('Yasoob', 'Yellow'),
-    ('Ali', 'Blue'),
-    ('Arham', 'Green'),
-    ('Ali', 'Black'),
-    ('Yasoob', 'Red'),
-    ('Ahmed', 'Silver'),
-)
-
-favs = Counter(name for name, colour in colours)
-print(favs)
+d = deque()
+d.append('1')
+d.appendleft('0')
+d.pop()
+d.popleft()

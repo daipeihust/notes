@@ -103,3 +103,68 @@ some_dict['colours']['favourite'] = "yellow"
 
 ## 运行正常
 ```
+
+# Counter
+
+```py
+from collections import Counter
+
+colours = (
+    ('Yasoob', 'Yellow'),
+    ('Ali', 'Blue'),
+    ('Arham', 'Green'),
+    ('Ali', 'Black'),
+    ('Yasoob', 'Red'),
+    ('Ahmed', 'Silver'),
+)
+
+favs = Counter(name for name, colour in colours)
+print(favs)
+
+## 输出:
+## Counter({
+##     'Yasoob': 2,
+##     'Ali': 2,
+##     'Arham': 1,
+##     'Ahmed': 1
+##  })
+```
+
+统计文件
+```py
+with open('filename', 'rb') as f:
+    line_count = Counter(f)
+print(line_count)
+```
+
+# deque
+双端队列
+
+```py
+from collections import deque
+
+d = deque()
+d.append('1')
+d.appendleft('0')
+d.pop()
+d.popleft()
+
+```
+
+# Enum
+
+```py
+from enum import Enum
+
+class Species(Enum):
+    cat = 1
+    dog = 2
+    horse = 3
+    aardvark = 4
+    butterfly = 5
+    owl = 6
+    platypus = 7
+    dragon = 8
+    unicorn = 9
+
+```
