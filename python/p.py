@@ -1,10 +1,10 @@
 #!/usr/local/bin/python3
 
-class my_class(object):
-    def __init__(self):
-        print('init')
-    
-    def __call__(self):
-        print('call')
+class MyClass(object):
+  __slots__ = ['name', 'identifier']
+  def __init__(self, name, identifier):
+      self.name = name
+      self.identifier = identifier
 
-my_class()()
+myClass = MyClass('a', 'b')
+print(myClass.name)
