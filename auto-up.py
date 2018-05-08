@@ -3,7 +3,7 @@
 import os
 from threading import Timer
 
-minutes = 15
+minutes = 60
 
 def upTask():
     os.system('./up.sh')
