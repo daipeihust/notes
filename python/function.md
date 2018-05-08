@@ -37,7 +37,7 @@ f1()
 print(x, y, z)
 ```
 
-默认参数
+默认参数 **默认参数只会运算一次**
 
 ```py
 def say(message, times=1):

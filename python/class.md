@@ -50,3 +50,18 @@ class two(one):
 
 # __call__
 
+实现了__call__方法的类的实例可以当做函数用
+
+```py
+class my_class(object):
+    def __init__(self):
+        print('init')
+    
+    def __call__(self):
+        print('call')
+
+my_class()()
+# output:
+# init
+# call
+```
