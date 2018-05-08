@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 
 import os
 from threading import Timer
