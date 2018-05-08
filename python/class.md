@@ -47,3 +47,6 @@ class two(one):
         one.__init__(self, val1)
         self.val2 = val2
 ```
+
+# __call__
+

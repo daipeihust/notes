@@ -1,15 +1,10 @@
 #!/usr/local/bin/python3
 
-def fibon(n):
-    a = b = 1
-    for i in range(n):
-        yield a
-        a, b = b, a + b
+class my_class(object):
+    def __init__(self):
+        print('init')
     
-fi = fibon(10)
-print(fi)
+    def __call__(self):
+        print('call')
 
-for x in fi:
-    print(x)
-for x in fi:
-    print(x)
+my_class()()
