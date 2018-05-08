@@ -177,3 +177,17 @@ print(get_text("John")) # <p>Hello John</p>
 print(get_text.__name__) # get_text
 ```
 
+# 优化
+
+默认情况下Python用一个字典来保存一个对象的实例属性，对于不用在运行时动态添加属性的类，使用__slots__，给属性分配一个固定的储存空间，可以减小内存开销
+
+```py
+class MyClass(object):
+  __slots__ = ['name', 'identifier']
+  def __init__(self, name, identifier):
+      self.name = name
+      self.identifier = identifier
+      self.set_up()
+  # ...
+```
+
