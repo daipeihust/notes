@@ -105,3 +105,10 @@ listone = [2, 3, 4]
 listtwo = [2*i for i in listone if i > 2]
 print(listtwo) # [6, 8]
 ```
+
+# 三元运算符
+
+```py
+is_fat = True
+state = "fat" if is_fat else "not fat"
+```

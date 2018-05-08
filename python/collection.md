@@ -1,3 +1,49 @@
+# Set
+
+创建集合
+```py
+a_set = {'red', 'blue', 'green'}
+print(type(a_set))
+```
+
+交集
+```py
+valid = set(['yellow', 'red', 'blue', 'green', 'black'])
+input_set = set(['red', 'brown'])
+print(input_set.intersection(valid))
+### 输出: set(['red'])
+```
+
+差集
+```py
+valid = set(['yellow', 'red', 'blue', 'green', 'black'])
+input_set = set(['red', 'brown'])
+print(input_set.difference(valid))
+### 输出: set(['brown'])
+```
+
+# List
+
+```py
+shoplist = ['apple', 'mango', 'carrot', 'banana']
+```
+
+# Tuple（元祖）
+
+```py
+zoo = ('python', 'elephant', 'penguin')
+```
+
+# Dict（字典）
+
+```py
+ab = {
+    'Swaroop': 'swaroop@swaroopch.com',
+    'Larry': 'larry@wall.org',
+    'Matsumoto': 'matz@ruby-lang.org',
+    'Spammer': 'spammer@hotmail.com'
+}
+```
 
 # 切片运算
 
