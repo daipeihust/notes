@@ -30,6 +30,21 @@ for x in fibon(1000000):
 
 ```py
 items = [1, 2, 3, 4, 5]
+# 在Python3中map返回的是迭代器，需要用list转换成列表
 squared = list(map(lambda x: x**2, items))
 ```
+
+# 迭代
+
+```py
+# 字符串是可迭代对象（实现了__iter__或__getitem__方法的对象）
+my_str = 'hello'
+
+# 对其调用iter方法可以获得迭代器（实现了__next__方法的对象）
+my_iter = iter(my_str)
+
+# list方法可以将迭代器转换为列表
+my_list = list(my_iter)
+```
+
 
