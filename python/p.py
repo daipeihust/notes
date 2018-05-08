@@ -7,6 +7,7 @@ def fibon(n):
         a, b = b, a + b
     
 fi = fibon(10)
+print(fi)
 
 for x in fi:
     print(x)

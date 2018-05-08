@@ -13,13 +13,6 @@ vs2 = {"v1": 1, "v2": 2, "v3": 3}
 test_method(**vs2)
 ```
 
-# map
-
-```py
-items = [1, 2, 3, 4, 5]
-# 在Python3中map返回的是迭代器，需要用list转换成列表
-squared = list(map(lambda x: x**2, items))
-```
 
 # 迭代
 
@@ -45,7 +38,7 @@ my_list2 = list(my_iter)
 ```
 
 # 生成器
-
+生成器也是一种迭代器
 ```py
 def fibon(n):
     a = b = 1
@@ -53,6 +46,62 @@ def fibon(n):
         yield a
         a, b = b, a + b
 
-for x in fibon(1000000):
+fi = fibon(10) # <generator object fibon at 0x10c37a1a8>
+
+for x in fi:
     print(x)
+```
+
+# Map
+
+```py
+items = [1, 2, 3, 4, 5]
+# 在Python3中map返回的是迭代器，需要用list转换成列表
+squared = list(map(lambda x: x**2, items))
+```
+
+```py
+def multiply(x):
+        return (x*x)
+def add(x):
+        return (x+x)
+
+funcs = [multiply, add]
+for i in range(5):
+    value = map(lambda x: x(i), funcs)
+    print(list(value))
+
+# Output:
+# [0, 0]
+# [1, 2]
+# [4, 4]
+# [9, 6]
+# [16, 8]
+```
+
+# Filter
+
+```py
+number_list = range(-5, 5)
+less_than_zero = filter(lambda x: x < 0, number_list)
+print(list(less_than_zero))  
+
+# Output: [-5, -4, -3, -2, -1]
+```
+
+# Reduce
+
+```py
+from functools import reduce
+product = reduce( (lambda x, y: x * y), [1, 2, 3, 4] )
+
+# Output: 24
+```
+
+# 列表推导
+
+```py
+listone = [2, 3, 4]
+listtwo = [2*i for i in listone if i > 2]
+print(listtwo) # [6, 8]
 ```
