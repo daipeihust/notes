@@ -7,3 +7,4 @@ d.append('1')
 d.appendleft('0')
 d.pop()
 d.popleft()
+
