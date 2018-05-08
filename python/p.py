@@ -1,10 +1,14 @@
 #!/usr/local/bin/python3
 
-s = 'hello'
+def fibon(n):
+    a = b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+    
+fi = fibon(10)
 
-si = iter(s)
-
-# sl = list(si)
-# print(sl)
-for i in si:
-    print(i)
+for x in fi:
+    print(x)
+for x in fi:
+    print(x)
