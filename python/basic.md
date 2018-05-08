@@ -117,7 +117,7 @@ finally:
     print("(Cleaning up: Closed the file)")
 ```
 
-使用with语句可以达到同样效果
+使用with语句可以达到同样效果，对于文件操作，最好用with语句
 
 ```py
 with open("poem.txt") as f:
