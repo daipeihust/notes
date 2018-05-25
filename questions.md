@@ -10,5 +10,7 @@
 6. extern NSMutableURLRequest * CanonicalRequestForRequest(NSURLRequest *request)
 7. va_start(ap, param) va_end(ap) va_list
 8. wraps()的实现原理
+9. Promise in javascript
+
 
 
