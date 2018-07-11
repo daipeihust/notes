@@ -1,0 +1,2 @@
+1. libsystem_kernel.dylib`__abort_with_payload
+该崩溃的主要原因是因为没有权限，在iOS10之后需要访问相机、相册、通讯录之类的资源时需要在应用的info.plist加入需要使用资源的描述。
