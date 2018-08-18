@@ -25,3 +25,14 @@
 |`c s <existing char> <desired char>`|Change surround existing to desired|
 |`y s <motion> <desired char>`|Surround something with something using motion (as in "you surround")|
 |`S <desired char>`|Surround when in visual modes (surrounds full selection)|
+
+# execute shell in vim
+
+```
+:! By itself, runs the last external command (from your shell history)
+:!! Repeats the last command
+:silent !{cmd} Eliminates the need to hit enter after the command is done
+:r !{cmd} Puts the output of $cmd into the current buffer.
+```
+
+or use ctrl-z to suspend vim and use `fg` back to vim
