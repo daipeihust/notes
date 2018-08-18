@@ -13,9 +13,9 @@ class Person
 end
 
 group = [
-Person.new("Bob", 33),
-Person.new("Chris", 16),
-Person.new("Ash", 23)
+    Person.new("Bob", 33),
+    Person.new("Chris", 16),
+    Person.new("Ash", 23)
 ]
 
 puts group.sort.reverse
