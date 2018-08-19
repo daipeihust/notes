@@ -32,3 +32,39 @@ end
 setter, getter = create_set_and_get  # ie. returns two values
 setter.call(21)
 getter.call # => 21
+
+
+
+# yield
+def test
+    puts "在 test 方法内"
+    yield
+    puts "你又回到了 test 方法内"
+    yield
+ end
+ test {puts "你在块内"}
+
+# => 在 test 方法内
+# => 你在块内
+# => 你又回到了 test 方法内
+# => 你在块内
+
+
+def test
+    yield 5
+    puts "在 test 方法内"
+    yield 100
+end
+test {|i| puts "你在块 #{i} 内"}
+
+# => 你在块 5 内
+# => 在 test 方法内
+# => 你在块 100 内
+
+
+
+# pass closure to function
+def test(&block)
+    block.call
+end
+test { puts "Hello World!"}
