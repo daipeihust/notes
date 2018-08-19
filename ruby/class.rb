@@ -1,5 +1,7 @@
+require 'module'
 
 class Person
+    include Trig
     attr_reader :name, :age
     def initialize(name, age)
         @name, @age = name, age
@@ -23,3 +25,7 @@ puts group.sort.reverse
 # => Bob(33)
 # => Ash(23)
 # => Chris(16)
+
+# invoke sin method mixed from Module Trig
+person = Person.new("a", 10)
+person.sin(10)
