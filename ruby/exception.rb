@@ -1,4 +1,5 @@
 
+# begin, rescue
 begin
     file = open("/unexistant_file")
     if file
@@ -11,6 +12,7 @@ print file, "==", STDIN, "\n"
 
 
 
+# retry
 begin
     file = open("/unexistant_file")
     if file
@@ -23,6 +25,7 @@ end
 
 
 
+# raise
 begin  
     puts 'I am before the raise.'  
     raise 'An error has occurred.'  
@@ -34,6 +37,7 @@ puts 'I am after the begin block.'
 
 
 
+# ensure
 begin
     raise 'A test exception.'
 rescue Exception => e
@@ -45,6 +49,7 @@ end
 
 
 
+# else
 begin
     # 抛出 'A test exception.'
     puts "I'm not raising exception"
@@ -59,6 +64,7 @@ end
 
 
 
+# catch
 def promptAndGet(prompt)
     print prompt
     res = readline.chomp

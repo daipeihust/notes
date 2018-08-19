@@ -29,3 +29,12 @@ puts group.sort.reverse
 # invoke sin method mixed from Module Trig
 person = Person.new("a", 10)
 person.sin(10)
+
+
+
+# overload
+class Student < Person
+    def to_s
+        "student name:#@name, age:#@age"
+    end
+end
