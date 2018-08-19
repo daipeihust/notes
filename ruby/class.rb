@@ -1,4 +1,4 @@
-require 'module'
+require 'module.rb'
 
 class Person
     include Trig

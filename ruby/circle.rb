@@ -54,47 +54,43 @@ for i in 0..5
     puts "局部变量的值为 #{i}"
 end
 
-(0..5).each do |i|
-    puts "局部变量的值为 #{i}"
- end
+
+
+# break
+for i in 0..5
+   if i > 2 then
+      break
+   end
+   puts "局部变量的值为 #{i}"
+end
 
 
 
- # break
- for i in 0..5
-    if i > 2 then
-       break
-    end
-    puts "局部变量的值为 #{i}"
- end
+# next
+for i in 0..5
+   if i < 2 then
+      next
+   end
+   puts "局部变量的值为 #{i}"
+end
 
 
 
- # next
- for i in 0..5
-    if i < 2 then
-       next
-    end
-    puts "局部变量的值为 #{i}"
- end
+# redo
+for i in 0..5
+   if i < 2 then
+      puts "局部变量的值为 #{i}"
+      redo
+   end
+end
 
 
 
- # redo
- for i in 0..5
-    if i < 2 then
-       puts "局部变量的值为 #{i}"
-       redo
-    end
- end
-
-
-
- # retry
- for i in 1..5 # 无限循环
-    retry if  i > 2
-    puts "局部变量的值为 #{i}"
- end
+# retry
+for i in 1..5 # 无限循环
+   retry if  i > 2
+   puts "局部变量的值为 #{i}"
+end
  
 begin
     # 抛出异常
