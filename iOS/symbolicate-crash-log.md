@@ -12,3 +12,15 @@ Information from the crash report that is needed to use atos.
 ```shell
 atos -arch arm64 -o TheElements.app.dSYM/Contents/Resources/DWARF/TheElements -l 0x1000e4000 0x00000001000effdc
 ```
+
+load address = stack address - offset
+
+symbol address = stack address - load address
+
+![address](./image/stack-load-address-offset.png)
+
+Use stack address, load address and dSYM file can find symbol.
+
+```shell
+atos -arch arm64 -o [dSYM] -l [load address] [stack address]
+```
