@@ -2,9 +2,13 @@
 # Vim tricks
 
 `;` - repeat find operation.
+
 `gj`, `gk` - jump between visual row, not logic row.
+
 `.` - repeat operation.
+
 `t`, `T` - find until
+
 `f`, `f` - find
 
 # VSCode Vim tricks
