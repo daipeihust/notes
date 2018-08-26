@@ -1,5 +1,6 @@
 
 # Vim tricks
+
 `;` - repeat find operation.
 `gj`, `gk` - jump between visual row, not logic row.
 `.` - repeat operation.
@@ -7,6 +8,7 @@
 `f`, `f` - find
 
 # VSCode Vim tricks
+
 `gd` - jump to definition.
 
 `gq` - on a visual selection reflow and wordwrap blocks of text, preserving commenting style. Great for formatting documentation comments.
@@ -28,7 +30,7 @@
 
 # execute shell in vim
 
-```
+```shell
 :! By itself, runs the last external command (from your shell history)
 :!! Repeats the last command
 :silent !{cmd} Eliminates the need to hit enter after the command is done
