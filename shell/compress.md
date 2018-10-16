@@ -1,5 +1,5 @@
 
-# tar
+# tar （归档）
 
 -A或--catenate：新增文件到以存在的备份文件；
 -B：设置区块大小；
@@ -86,6 +86,14 @@ unzip tmp.zip
 
 # bzip2 (bunzip2)
 
+解压时不会强依赖文件名后缀，当文件名后缀无法识别时，会在解压的输出文件后面加上.out
+
+解压文件名变化
+xxx.bz2         -> xxx
+xxx.tar.bz2     -> xxx.tar
+xxx             -> xxx.out
+
+
 -c或——stdout：将压缩与解压缩的结果送到标准输出；
 -d或——decompress：执行解压缩；
 -f或-force：bzip2在压缩或解压缩时，若输出文件与现有文件同名，预设不会覆盖现有文件。若要覆盖。请使用此参数；
@@ -113,6 +121,13 @@ bzip2 -d tmpfile.bz2
 
 ## gzip (gunzip)
 
+解压时会去识别压缩文件名后缀，对于后缀不正确的不会进行解压。
+
+解压文件名变化
+xxx.gz        -> xxx
+xxx.tar.gz    -> xxx.tar
+xxx.tgz       -> xxx.tar
+
 -a或——ascii：使用ASCII文字模式；
 -d或--decompress或----uncompress：解开压缩文件；
 -f或——force：强行压缩文件。不理会文件名称或硬连接是否存在以及该文件是否为符号连接；
@@ -139,7 +154,14 @@ gzip tmpfile // output -> tmpfile.gz
 gzip -d tmpfile.gz
 ```
 
-# compress
+# compress （unix压缩归档）
+
+
+解压时也会依赖文件名后缀，后缀不正确时解压无法成功
+
+解压文件名变化
+xxx.Z       -> xxx
+xxx.tar.Z   -> xxx.tar
 
 -f：不提示用户，强制覆盖掉目标文件；
 -c：将结果送到标准输出，无文件被改变；
