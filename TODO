@@ -1,6 +1,3 @@
-研究method swizzling，runtime代码
-安装vim-pencil：https://github.com/reedes/vim-pencil
-研究goyo.vim：https://github.com/junegunn/goyo.vim
 better vi mode in zsh: http://stratus3d.com/blog/2017/10/26/better-vi-mode-in-zshell/
 anyframe中切换分支加入远程分支
 再次熟悉runtime 
@@ -16,3 +13,6 @@ https://zhuanlan.zhihu.com/p/36064672 基于netty实现一个自己的web框架
 
 Finished
 synchronized的底层实现：http://yulingtianxia.com/blog/2015/11/01/More-than-you-want-to-know-about-synchronized/
+安装vim-pencil：https://github.com/reedes/vim-pencil
+研究goyo.vim：https://github.com/junegunn/goyo.vim
+研究method swizzling，runtime代码
